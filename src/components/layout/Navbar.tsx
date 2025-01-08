@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { ModeToggle } from "../mode-toggle";
 
 const Navbar = () => {
     return (
-        <nav className="bg-gray-800 text-white">
+        <nav className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -12,18 +13,15 @@ const Navbar = () => {
   
             {/* Menu Items */}
             <div className="hidden md:flex space-x-4">
-              <Link to={"/"} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link to={"/"} className=" px-3 py-2 rounded-md text-sm font-medium">
                 Tasks
               </Link>
-              <Link to={'users'} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link to={'users'} className=" px-3 py-2 rounded-md text-sm font-medium">
                 Users
               </Link>
-              <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Services
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Contact
-              </a>
+              <div>
+                <ModeToggle />
+              </div>
             </div>
   
             {/* Mobile Menu Button */}
