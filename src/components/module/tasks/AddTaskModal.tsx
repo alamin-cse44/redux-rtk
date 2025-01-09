@@ -29,22 +29,23 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Textarea } from "@/components/ui/textarea";
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { useAppDispatch } from "@/redux/hooks";
 import { addTask } from "@/redux/features/task/taskSlice";
+import { ITask } from "@/types";
 
 export function AddTaskModal() {
   const form = useForm();
 
   const dispatch = useAppDispatch();
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-    dispatch(addTask(data));
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    // console.log(data);
+    dispatch(addTask(data as ITask));
   };
 
   return (
