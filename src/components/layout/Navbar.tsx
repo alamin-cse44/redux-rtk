@@ -19,6 +19,9 @@ const Navbar = () => {
               <Link to={'users'} className=" px-3 py-2 rounded-md text-sm font-medium">
                 Users
               </Link>
+              <Link to={'counters'} className=" px-3 py-2 rounded-md text-sm font-medium">
+                Counters
+              </Link>
               <div>
                 <ModeToggle />
               </div>

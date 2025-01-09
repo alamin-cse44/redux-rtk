@@ -1,4 +1,5 @@
 import App from "@/App";
+import Counter from "@/pages/counter";
 import Login from "@/pages/login";
 import Tasks from "@/pages/tasks";
 import Users from "@/pages/users";
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
             {
                 path: "users",
                 element: <Users />,
+            },
+            {
+                path: "counters",
+                element: <Counter />,
             },
             
         ],
